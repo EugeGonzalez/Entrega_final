@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 def file_size(value): 
     limit = 4 * 1024 * 1024
     if value.size > limit:
-        raise ValidationError('Imagen demasiado grande. El archivo no puede pesar as de  2 MB.')
+        return ValidationError('Imagen demasiado grande.')
 
 class form_register(UserCreationForm):
     email = forms.EmailField (required=False)

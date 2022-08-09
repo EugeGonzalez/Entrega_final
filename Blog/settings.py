@@ -57,7 +57,9 @@ ROOT_URLCONF = 'Blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR],
+        'DIRS': ['C:/Users/eushe/OneDrive/Desktop/Entrega_final/Blog/Inicio/templates/',
+        'C:/Users/eushe/OneDrive/Desktop/Entrega_final/Blog/Posts/templates/',
+        'C:/Users/eushe/OneDrive/Desktop/Entrega_final/Blog/Usuarios/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
