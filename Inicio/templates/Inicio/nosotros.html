@@ -1,0 +1,66 @@
+{% extends 'Inicio/index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}  
+        {% block head %}    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="{% static '/Inicio/css/styles.css' %}" rel="stylesheet" />
+        <title>Nosotros</title>
+        
+        {% endblock head %}
+    </head>
+
+    {% block contenido %}
+    
+    <body id="page-top">
+
+        
+
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px4 text-center">
+                <h1 class="fw-bolder">Creditos</h1>
+                <p class="lead">Creadores del Blog de Recetario</p>
+                <a class="btn btn-lg btn-light" href="#about"></a>
+            </div>
+        </header>
+
+        
+
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>De qué se trata la pagina?</h2>
+                        <p class="lead">El Blog se presta a la obtencion de recetas para cocinar y a su vez da a lugar a que cada persona pueda subir una receta propia. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Nosotros</h2>
+                        <p class="lead">Mi nombre es Maria Eugenia, estoy iniciando con la programación, tengo muchas ganas de seguir aprendiendo de este nuevo mundo.</p>
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% endblock contenido %}
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
