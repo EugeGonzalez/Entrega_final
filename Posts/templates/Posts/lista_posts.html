@@ -2,7 +2,7 @@
 
 {% block posts %}
 {% if posts %}
-{% for post in posts %}
+    {% for post in posts %}
 
     <ul>
         <div class="row">
@@ -29,7 +29,7 @@
         </div>
     </ul>
     {% endfor %}
-    {% else %}
+{% else %}
     <h3>No se encontraron posts :( </h3>
 {% endif %}
 {% endblock posts %}
