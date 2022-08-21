@@ -38,7 +38,7 @@ def login (request):
 
             if user is not  None:
                 Login(request, user)
-                return render(request, "Inicio/index.html", {'msj':f'Bienvenido {usuario}!'})
+                return render(request, "Inicio/index.html", {'msj':f'Bienvenido {username}!'})
             else:
                 return render(request, 'Usuarios/login.html', {'form':form})
 
@@ -81,9 +81,9 @@ def editar (request):
             logued_user.save()
             usuario_extendido.save()
             
-            return render(request, "Inicio/index.html", {'msj':msj, 'user_avatar':buscar_url_avatar(request.user)})
+            return render(request, "Inicio/index.html", {'msj':msj})
         else:
-            return render(request, "Inicio/index.html", {'form':form, 'msj':'', 'user_avatar':buscar_url_avatar(request.user)})
+            return render(request, "Inicio/index.html", {'form':form, 'msj':''})
 
         
         
@@ -97,14 +97,14 @@ def editar (request):
             'bio': usuario_extendido.bio
         }
     )
-    return render(request, "Usuarios/templates/editar_user.html", {'form':form, 'msj':'', 'user_avatar':buscar_url_avatar(request.user)})
+    return render(request, "Usuarios/editar_user.html", {'form':form, 'msj':''})
 
 
 
 
 def perfil(request):
     mas_datos, _ = NuestroUser.objects.get_or_create(user=request.user)
-    return render(request, "Usuarios/templates/perfil_user.html", {'mas_datos':mas_datos ,'user_avatar':buscar_url_avatar(request.user)})
+    return render(request, "Usuarios/perfil_user.html", {'mas_datos':mas_datos})
 
 
 
