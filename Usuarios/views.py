@@ -17,7 +17,7 @@ def register (request):
             
             username = form.cleaned_data['username']
             form.save()
-            return render(request, "Inicio/index.html", {'msj':f'Se creo el user {username}'})
+            return render(request, "Inicio/index.html", {'msj':f'Se creo el usuario {username}'})
         else:
             return render(request, "Usuarios/register.html", {'form':form})
     form = form_register()
@@ -31,15 +31,14 @@ def login (request):
 
 
         if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
+            username = request.POST['username']
+            password = request.POST['password']
 
             user = authenticate(username=username, password=password)
 
             if user is not  None:
                 Login(request, user)
-                usuario = form.cleaned_data['username']
-                return render(request, "Inicio/index.html", {'msj':f'Bienvenido {usuario}!', 'user_avatar':buscar_url_avatar(request.user)})
+                return render(request, "Inicio/index.html", {'msj':f'Bienvenido {usuario}!'})
             else:
                 return render(request, 'Usuarios/templates/login.html', {'form':form})
 
