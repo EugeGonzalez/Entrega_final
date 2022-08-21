@@ -40,14 +40,14 @@ def login (request):
                 Login(request, user)
                 return render(request, "Inicio/index.html", {'msj':f'Bienvenido {usuario}!'})
             else:
-                return render(request, 'Usuarios/templates/login.html', {'form':form})
+                return render(request, 'Usuarios/login.html', {'form':form})
 
         else:
-            return render(request, 'Usuarios/templates/login.html', {'form':form})
+            return render(request, 'Usuarios/login.html', {'form':form})
 
     else:
         form = AuthenticationForm()
-        return render(request, 'Usuarios/templates/login.html', {'form':form})
+        return render(request, 'Usuarios/login.html', {'form':form})
 
 
 
