@@ -8,4 +8,4 @@ Maria se encargo de la inicialización del proyecto, el armado del html con boos
 
 Mateo se encargo de los Posts, el armado para que funcione, colaboró con los usuarios, con las correciones para que todo ande correctamente. Realizó las pruebas del funcionamiento.
 
-https://drive.google.com/file/d/1AICkdDmRwvM92L_3Yo-GnneS-mcKzfXC/view?usp=sharing
+VIDEO PRUEBA: https://drive.google.com/file/d/1L01Srlk5ZKtJ00_s0o3HjHZ_GF_BbnNI/view?usp=sharing
